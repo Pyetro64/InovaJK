@@ -29,7 +29,18 @@
           </span>
         </a>
 
-        <nav class="nav" aria-label="Navegação principal">
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="navMenu" aria-label="Navegação principal">
           <a href="../index.html">Home</a>
           <a href="empresa.html">Empresa</a>
           <a href="cursos.html">Áreas de Atuação</a>
@@ -38,6 +49,8 @@
           <a href="roadmap.html">Roadmap</a>
           <a href="contato_reg.html">Contato</a>
         </nav>
+
+        <div class="nav-overlay" id="navOverlay"></div>
 
         <button
           type="button"

@@ -34,4 +34,58 @@ document.addEventListener('DOMContentLoaded', function () {
       applyTheme(current === 'dark' ? 'light' : 'dark');
     });
   }
+
+  // ---- Menu mobile (hambúrguer) ----
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeMenu() {
+    if (!navToggle || !navMenu) return;
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menu');
+    navMenu.classList.remove('is-open');
+    if (navOverlay) navOverlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    if (!navToggle || !navMenu) return;
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Fechar menu');
+    navMenu.classList.add('is-open');
+    if (navOverlay) navOverlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // fecha ao clicar fora (no overlay escurecido)
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeMenu);
+    }
+
+    // fecha ao clicar em um link do menu
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // fecha com a tecla Esc
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    // se a tela for redimensionada para desktop com o menu aberto, fecha
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 760) closeMenu();
+    });
+  }
 });
