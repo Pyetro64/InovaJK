@@ -1,44 +1,49 @@
 :root {
   color-scheme: light;
 
-  /* marca (mantém-se sempre roxo/lilás no claro) */
-  --roxo: #5b2a86;
-  --roxo-escuro: #2d114a;
-  --roxo-claro: #f4edff;
-  --roxo-vivo: #7d49b9;
+  /* nova paleta: índigo tecnológico (parente do roxo original, mas lido
+     como "software/tecnologia") + ciano como cor de destaque, remetendo a
+     trilhas de placa de circuito — mantém o preto do logotipo como âncora */
+  --roxo: #4338ca;
+  --roxo-escuro: #1e1b4b;
+  --roxo-claro: #eef1ff;
+  --roxo-vivo: #6366f1;
+
+  --destaque: #06b6d4;
+  --destaque-fundo: #e5fbff;
 
   /* superfícies e texto */
   --branco: #ffffff;
   --bg: #ffffff;
-  --bg-soft: #f8f6fb;
+  --bg-soft: #f5f5fb;
   --surface: #ffffff;
-  --texto: #1c1725;
-  --texto-suave: #5e5873;
-  --borda: #efe6fd;
-  --borda-suave: #eee8fa;
+  --texto: #14121f;
+  --texto-suave: #5b5a73;
+  --borda: #e7e6f7;
+  --borda-suave: #eeeef7;
 
   /* inputs */
-  --input-bg: #fcfaff;
-  --input-borda: #e7deff;
+  --input-bg: #fafaff;
+  --input-borda: #dcdcf2;
 
   /* sombras */
-  --sombra: 0 18px 40px rgba(60, 29, 88, 0.12);
-  --card-sombra: 0 10px 24px rgba(87, 48, 120, 0.04);
-  --card-sombra-2: 0 14px 28px rgba(52, 31, 82, 0.05);
+  --sombra: 0 18px 40px rgba(30, 27, 75, 0.14);
+  --card-sombra: 0 10px 24px rgba(30, 27, 75, 0.05);
+  --card-sombra-2: 0 14px 28px rgba(30, 27, 75, 0.06);
 
   /* topbar / footer */
-  --topbar-bg: rgba(255, 255, 255, 0.9);
-  --topbar-borda: rgba(91, 42, 134, 0.08);
-  --footer-bg: #1e1428;
-  --footer-texto: rgba(255, 255, 255, 0.8);
+  --topbar-bg: rgba(255, 255, 255, 0.92);
+  --topbar-borda: rgba(67, 56, 202, 0.1);
+  --footer-bg: #0b0a1a;
+  --footer-texto: rgba(255, 255, 255, 0.82);
 
   /* gradientes */
-  --hero-grad: linear-gradient(135deg, #fff 0%, #f7f1ff 42%, #ede3ff 100%);
-  --banner-grad: linear-gradient(135deg, #f7f0ff 0%, #efe5ff 100%);
-  --program-grad: linear-gradient(180deg, #fff 0%, #faf7ff 100%);
+  --hero-grad: linear-gradient(135deg, #fff 0%, #f1f1ff 40%, #e3e4ff 100%);
+  --banner-grad: linear-gradient(135deg, #f1f1ff 0%, #e6ebff 100%);
+  --program-grad: linear-gradient(180deg, #fff 0%, #f7f8ff 100%);
   --brand-mark-grad: linear-gradient(135deg, var(--roxo), var(--roxo-vivo));
-  --btn-primary-grad: linear-gradient(135deg, var(--roxo), #7847ad);
-  --btn-primary-shadow: 0 15px 30px rgba(91, 42, 134, 0.2);
+  --btn-primary-grad: linear-gradient(135deg, var(--roxo), #3730a3);
+  --btn-primary-shadow: 0 15px 30px rgba(67, 56, 202, 0.24);
   --panel-primary-grad: linear-gradient(165deg, var(--roxo-escuro), var(--roxo));
   --cta-grad: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
 
@@ -50,39 +55,42 @@
 html[data-theme="dark"] {
   color-scheme: dark;
 
-  --roxo: #b98af0;
-  --roxo-escuro: #ead9ff;
-  --roxo-claro: rgba(185, 138, 240, 0.16);
-  --roxo-vivo: #c9a6ff;
+  --roxo: #a5b4fc;
+  --roxo-escuro: #e8eaff;
+  --roxo-claro: rgba(165, 180, 252, 0.16);
+  --roxo-vivo: #c7d2fe;
 
-  --bg: #120c1b;
-  --bg-soft: #170f22;
-  --surface: #1c1428;
-  --texto: #f3eefd;
-  --texto-suave: #b7a8d6;
-  --borda: rgba(185, 138, 240, 0.18);
-  --borda-suave: rgba(185, 138, 240, 0.12);
+  --destaque: #22d3ee;
+  --destaque-fundo: rgba(34, 211, 238, 0.16);
 
-  --input-bg: #1a1225;
-  --input-borda: rgba(185, 138, 240, 0.28);
+  --bg: #0a0a14;
+  --bg-soft: #10101c;
+  --surface: #141524;
+  --texto: #f1f1fb;
+  --texto-suave: #aeaed0;
+  --borda: rgba(165, 180, 252, 0.18);
+  --borda-suave: rgba(165, 180, 252, 0.12);
 
-  --sombra: 0 18px 40px rgba(0, 0, 0, 0.5);
-  --card-sombra: 0 10px 24px rgba(0, 0, 0, 0.35);
-  --card-sombra-2: 0 14px 28px rgba(0, 0, 0, 0.4);
+  --input-bg: #121323;
+  --input-borda: rgba(165, 180, 252, 0.28);
 
-  --topbar-bg: rgba(18, 12, 27, 0.85);
-  --topbar-borda: rgba(185, 138, 240, 0.16);
-  --footer-bg: #0b0712;
-  --footer-texto: rgba(243, 238, 253, 0.78);
+  --sombra: 0 18px 40px rgba(0, 0, 0, 0.55);
+  --card-sombra: 0 10px 24px rgba(0, 0, 0, 0.38);
+  --card-sombra-2: 0 14px 28px rgba(0, 0, 0, 0.42);
 
-  --hero-grad: linear-gradient(135deg, #120c1b 0%, #1a1229 45%, #241a38 100%);
-  --banner-grad: linear-gradient(135deg, #170f22 0%, #211533 100%);
-  --program-grad: linear-gradient(180deg, #1c1428 0%, #211930 100%);
-  --brand-mark-grad: linear-gradient(135deg, #a06fe0, #7d49b9);
-  --btn-primary-grad: linear-gradient(135deg, #a06fe0, #8a52c9);
-  --btn-primary-shadow: 0 15px 30px rgba(0, 0, 0, 0.55);
-  --panel-primary-grad: linear-gradient(165deg, #2d1a4a, #5e3690);
-  --cta-grad: linear-gradient(135deg, #2d1a4a, #5e3690);
+  --topbar-bg: rgba(10, 10, 20, 0.86);
+  --topbar-borda: rgba(165, 180, 252, 0.16);
+  --footer-bg: #06060d;
+  --footer-texto: rgba(241, 241, 251, 0.8);
+
+  --hero-grad: linear-gradient(135deg, #0a0a14 0%, #12122a 45%, #1b1b3a 100%);
+  --banner-grad: linear-gradient(135deg, #10101c 0%, #1a1a33 100%);
+  --program-grad: linear-gradient(180deg, #141524 0%, #191a2e 100%);
+  --brand-mark-grad: linear-gradient(135deg, #a5b4fc, #6366f1);
+  --btn-primary-grad: linear-gradient(135deg, #a5b4fc, #7c85e8);
+  --btn-primary-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  --panel-primary-grad: linear-gradient(165deg, #23234a, #4338ca);
+  --cta-grad: linear-gradient(135deg, #23234a, #4338ca);
 }
 
 * {
@@ -194,6 +202,7 @@ img {
 }
 
 .nav a {
+  position: relative;
   color: var(--texto-suave);
   font-weight: 600;
   transition: color 0.2s ease;
@@ -201,7 +210,35 @@ img {
 
 .nav a:hover,
 .nav a:focus-visible {
-  color: var(--roxo);
+  color: var(--destaque, var(--roxo));
+}
+
+.nav a.is-current {
+  color: var(--destaque, var(--roxo));
+  font-weight: 700;
+}
+
+.nav a.is-current::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--destaque, var(--roxo));
+}
+
+@media (max-width: 760px) {
+  .nav a.is-current::after {
+    display: none;
+  }
+
+  .nav a.is-current {
+    background: var(--roxo-claro);
+    border-radius: 10px;
+    padding-left: 12px;
+  }
 }
 
 /* Botão hambúrguer (menu mobile) — escondido no desktop */
@@ -365,6 +402,11 @@ h1 {
   background: var(--btn-primary-grad);
   box-shadow: var(--btn-primary-shadow);
   color: var(--branco);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  box-shadow: var(--btn-primary-shadow), 0 0 0 3px var(--destaque-fundo, transparent);
 }
 
 .button-secondary {
@@ -982,8 +1024,8 @@ textarea {
 }
 
 .status-badge.is-active {
-  background: var(--roxo-claro);
-  color: var(--roxo);
+  background: var(--destaque-fundo, var(--roxo-claro));
+  color: var(--destaque, var(--roxo));
 }
 
 .status-badge.is-soon {
@@ -1118,7 +1160,7 @@ textarea {
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--roxo);
+  color: var(--destaque, var(--roxo));
   font-weight: 700;
 }
 
