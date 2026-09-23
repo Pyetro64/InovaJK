@@ -88,4 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth > 760) closeMenu();
     });
   }
+
+  // ---- Destaque da página atual no menu ----
+  var currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a[href]').forEach(function (link) {
+    var linkFile = link.getAttribute('href').split('/').pop() || 'index.html';
+    if (linkFile === currentFile) {
+      link.classList.add('is-current');
+    }
+  });
 });
